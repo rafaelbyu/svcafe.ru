@@ -20,7 +20,7 @@ $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, 
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('rafael.byu@mail.ru'); // от кого будет уходить письмо?
-$mail->addAddress('rafael.byu@gmail.com');     // Кому будет уходить письмо
+$mail->addAddress('olga.kasatkina81@mail.ru');     // Кому будет уходить письмо
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -29,8 +29,8 @@ $mail->addAddress('rafael.byu@gmail.com');     // Кому будет уходи
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заявка с тестового сайта';
-$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email.'<br>Сообщение: '.$smth;
+$mail->Subject = 'Заявка с сайта svcafe.ru';
+$mail->Body    = '' .$name . ' оставил заявку, телефон ' .$phone. '<br>Почта этого пользователя: ' .$email.'<br>Сообщение: '.$smth;
 $mail->AltBody = '';
 
 if(!$mail->send()) {
